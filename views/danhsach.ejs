@@ -1,0 +1,8 @@
+<% items.forEach(function(item2) { %>
+    <div class="news-item">
+        <h3 class="news-title"><a href="/<%= item2.slug %>.html"><%= item2.title %></a>
+        </h3>
+        <p class="news-summary"><%= item2.description %>...</p>
+        <a href="/<%= item2.slug %>.html" class="read-more">Đọc thêm</a>
+    </div>
+  <% }); %>

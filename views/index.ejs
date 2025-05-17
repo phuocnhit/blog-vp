@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= meta.description %>">
+    <meta name="keywords" content="<%= meta.keywords %>">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style2.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNTMX0QXHW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HNTMX0QXHW');
+    </script>
+    <style>
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h1,
+        h2 {
+            color: #0056b3;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a class="alogo" href="/">
+                    <div class="logo">ĐÁO HẠN THẺ TÍN DỤNG 24/7</div>
+                </a>
+                <div class="contact-info">
+                    <div class="phone">
+                        <span class="phone-icon">☏</span>
+                        <span>0987 654 321</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/danh-sach.html">Câu hỏi thường gặp</a></li>
+                        <li><a href="#process">Quy Trình</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="news-detail">
+        <div class="container">
+            <div class="news-card">
+              <h1> <%= title %></h1>
+              <article>
+              <%- body %>      
+              </article>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
