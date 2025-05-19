@@ -56,24 +56,26 @@ function toSlug(str) {
 readJsonFilesFromFolder('./datas').then(dataList => {
   console.log('JSON data list:', dataList.length);
   // OR with for...of loop
-  // for (const [index, data] of dataList.entries()) {
-  //   console.log(`\nFile ${index + 1}:`);
-  //   console.log(data);
-  //   // Render EJS and write to index.html
-  //     let urlFile = toSlug(data.meta.title);
-  //     outputPath = path.join(__dirname, 'dist', `${urlFile}.html`);
+  for (const [index, data] of dataList.entries()) {
+    console.log(`\nFile ${index + 1}:`);
+    console.log(data);
+    if(data){
+    // Render EJS and write to index.html
+      let urlFile = toSlug(data.meta.title);
+      outputPath = path.join(__dirname, 'dist', `${urlFile}.html`);
 
-  //     ejs.renderFile(templatePath, data, (err, str) => {
-  //       if (err) {
-  //         console.error('Error rendering EJS:', err);
-  //       } else {
-  //         fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  //         fs.writeFileSync(outputPath, str);
-  //         console.log('index.html has been generated in /dist');
-  //       }
-  //     });
+      ejs.renderFile(templatePath, data, (err, str) => {
+        if (err) {
+          console.error('Error rendering EJS:', err);
+        } else {
+          fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+          fs.writeFileSync(outputPath, str);
+          console.log('index.html has been generated in /dist');
+        }
+      });
+    }
 
-  // }
+  }
   var dataFinal = [];
   for (const [index, data] of dataList.entries()) {
     try {
