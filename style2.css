@@ -661,3 +661,38 @@ footer {
     text-decoration: none;
     color: #fff;
 }
+ .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1px 0 10px 0;
+            gap: 8px;
+        }
+
+        .page-link {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 0 2px;
+            background: #f5f5f5;
+            color: #333;
+            border-radius: 4px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            transition: background 0.2s, color 0.2s, border 0.2s;
+            font-weight: 500;
+        }
+
+        .page-link:hover,
+        .page-link:focus {
+            background: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+
+        .page-link.active {
+            background: #007bff;
+            color: #fff;
+            border-color: #007bff;
+            pointer-events: none;
+            cursor: default;
+        }
